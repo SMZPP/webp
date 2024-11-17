@@ -6,3 +6,8 @@ Pythonをインストールした後、Pillowライブラリをインストー�
 ```
 pip install pillow
 ```
+
+※あるOSでは、pip3で利用する
+```
+pip3 install pillow
+```
