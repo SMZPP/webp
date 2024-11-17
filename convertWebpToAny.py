@@ -21,7 +21,7 @@ def convert_and_resize_images(input_folder, output_folder, output_format="PNG", 
 
             with Image.open(input_path) as img:
                 img = img.convert('RGBA') if output_format == "PNG" else img.convert('RGB')
-                img = img.resize(size, Image.ANTIALIAS)
+                img = img.resize(size, Image.Resampling.LANCZOS)
                 img.save(output_path, output_format.upper())
             print(f"Converted and resized: {file_name} -> {output_path}")
 

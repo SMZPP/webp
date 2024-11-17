@@ -11,7 +11,7 @@ def convert_and_resize_webp_to_png(input_folder, output_folder, size=(32, 32)):
 
             with Image.open(input_path) as img:
                 img = img.convert('RGBA')
-                img = img.resize(size, Image.ANTIALIAS)
+                img = img.resize(size, Image.Resampling.LANCZOS)
                 img.save(output_path, 'PNG')
             print(f"Converted and resized: {file_name} -> {output_path}")
 
